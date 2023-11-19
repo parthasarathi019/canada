@@ -4,6 +4,7 @@ import DashboardLayout from "../../Layout/DashboardLayout";
 import ErrorPage from "../../Components/ErrorPage/ErrorPage";
 import Home from "../../Pages/Home/Home";
 import About from "../../Pages/About/About";
+import Contact from "../../Pages/Contact/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: "/contact",
+        element: <Contact />
       }
     ]
   },
