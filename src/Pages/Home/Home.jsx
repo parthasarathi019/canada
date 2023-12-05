@@ -122,3 +122,4 @@ const SearchResult = ({ user }) => {
 };
 
 export default App;
+
