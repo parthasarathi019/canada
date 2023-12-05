@@ -4,13 +4,3 @@
 @tailwind utilities;
 
 
-*{
-  ::-webkit-scrollbar {
-      width: 0;
-      background: transparent;
-    }
-  }
-
-  *{
-    /* font-family: 'Josefin Sans'; */
-  }
