@@ -9,7 +9,11 @@ const App = () => {
   const [searchId, setSearchId] = useState('');
   const [searchResult, setSearchResult] = useState(null);
   const [noResult, setNoResult] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
+  const toggleMenu = () => {
+    setShowMenu((prev) => !prev);
+  };
   const handleSearch = async () => {
     try {
       const response = await axios.get(`http://localhost:7000/result/${searchId}`);
@@ -31,9 +35,234 @@ const App = () => {
         <div><input placeholder='Search IRCC' className="w-full bg-slate-50  border-[1.8px] border-gray-800 h-[2em] text-[1em] md:h-[2em] text-text placeholder-text-sm bg-transparent outline-none p-2" type="text" value={searchId} onChange={(e) => setSearchId(e.target.value)} /></div>
       </div>
       <div>
-        <hr className='border-[3.1px] border-black  border-t-0' />
-        <div className='w-[90%] mx-auto'>
-          <button className='px-[33px] py-[12px] text-[20px] text-white bg-[#26374a]'>MENU</button>
+        <hr className="border-[3.1px] border-black  border-t-0" />
+        <div className="w-[90%] mx-auto relative">
+          <button onClick={toggleMenu} className='flex bg-[#444] items-center px-[33px] py-[12px] text-[20px] text-white' >
+            <div className="">MENU</div>
+            <div><MaterialSymbolsKeyboardArrowDownRounded /></div>
+          </button>
+
+          {/* menu  */}
+          <div
+            className={`  ${showMenu ? " bg-[#444] text-white absolute top-14 left-0" : "hidden"
+              }`}
+          >
+            <ul className="space-y-3">
+              <li className="relative group p-3">
+                <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Jobs and the workplace</span>
+                <div className="bg-white min-w-max  text-black absolute top-0 left-[27rem] p-3  justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 group-hover:flex  transition duration-200">
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 dferew
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 erwerqwr
+                    </h1>
+                  </div>
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2 erqwe
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2rerqwerqewr
+                    </h1>
+                  </div>
+                </div>
+              </li>
+
+              <li className="relative group p-3">
+                <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Immigration and citizenship</span>
+                <div className="bg-white min-w-max  text-black absolute top-0 left-[27rem] p-3  justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 group-hover:flex  transition duration-200">
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 dferew
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 erwerqwr
+                    </h1>
+                  </div>
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2 erqwe
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2rerqwerqewr
+                    </h1>
+                  </div>
+                </div>
+              </li>
+
+              <li className="relative group p-3">
+                <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Travel and tourism</span>
+                <div className="bg-white min-w-max  text-black absolute top-0 left-[27rem] p-3  justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 group-hover:flex  transition duration-200">
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 dferew
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 erwerqwr
+                    </h1>
+                  </div>
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2 erqwe
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2rerqwerqewr
+                    </h1>
+                  </div>
+                </div>
+              </li>
+              <li className="relative group p-3">
+                <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Business and industry</span>
+                <div className="bg-white min-w-max  text-black absolute top-0 left-[27rem] p-3  justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 group-hover:flex  transition duration-200">
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 dferew
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 erwerqwr
+                    </h1>
+                  </div>
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2 erqwe
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2rerqwerqewr
+                    </h1>
+                  </div>
+                </div>
+              </li>
+              <li className="relative group p-3">
+                <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Benefits</span>
+                <div className="bg-white min-w-max  text-black absolute top-0 left-[27rem] p-3  justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 group-hover:flex  transition duration-200">
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 dferew
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 erwerqwr
+                    </h1>
+                  </div>
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2 erqwe
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2rerqwerqewr
+                    </h1>
+                  </div>
+                </div>
+              </li>
+              <li className="relative group p-3">
+                <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[2px] pl-[20px]">Environment and natural resources</span>
+                <div className="bg-white min-w-max  text-black absolute top-0 left-[27rem] p-3  justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 group-hover:flex  transition duration-200">
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 dferew
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 erwerqwr
+                    </h1>
+                  </div>
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2 erqwe
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2rerqwerqewr
+                    </h1>
+                  </div>
+                </div>
+              </li>
+              <li className="relative group p-3">
+                <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">National security and defence</span>
+                <div className="bg-white min-w-max  text-black absolute top-0 left-[27rem] p-3  justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 group-hover:flex  transition duration-200">
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 dferew
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 erwerqwr
+                    </h1>
+                  </div>
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2 erqwe
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2rerqwerqewr
+                    </h1>
+                  </div>
+                </div>
+              </li>
+              <li className="relative group p-3">
+                <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Culture, history and sport</span>
+                <div className="bg-white min-w-max  text-black absolute top-0 left-[27rem] p-3  justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 group-hover:flex  transition duration-200">
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 dferew
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 erwerqwr
+                    </h1>
+                  </div>
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2 erqwe
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2rerqwerqewr
+                    </h1>
+                  </div>
+                </div>
+              </li>
+              <li className="relative group p-3">
+                <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Canada and the world</span>
+                <div className="bg-white min-w-max  text-black absolute top-0 left-[27rem] p-3  justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 group-hover:flex  transition duration-200">
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 dferew
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 erwerqwr
+                    </h1>
+                  </div>
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2 erqwe
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2rerqwerqewr
+                    </h1>
+                  </div>
+                </div>
+              </li>
+              <li className="relative group p-3">
+                <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Science and innovation</span>
+                <div className="bg-white min-w-max  text-black absolute top-0 left-[27rem] p-3  justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 group-hover:flex  transition duration-200">
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 dferew
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link1 erwerqwr
+                    </h1>
+                  </div>
+                  <div className="flex items-center flex-col  gap-4">
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2 erqwe
+                    </h1>
+                    <h1 className="cursor-pointer  hover:underline">
+                      link2rerqwerqewr
+                    </h1>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
         </div>
       </div>
       <div className='md:px-[60px]'>
@@ -69,7 +298,71 @@ const App = () => {
         noResult && <h4>--- No Result Found ---</h4>
       )}
 
-      <img className='mt-4 shadow-lg  w-full cursor-pointer' src={moduleName2} alt="" />
+      {/* <img className='mt-4 shadow-lg  w-full cursor-pointer' src={moduleName2} alt="" /> */}
+
+      <footer className='mt-[100px]'>
+        <div className='flex justify-between gap-x-[7px] items-center px-[54px] pb-[43px]'>
+          <p>Date modified: 2023-11-23</p>
+          <button className='bg-[#eaebed] px-[55px] py-[10px] rounded-[4px]'>Share this page</button>
+        </div>
+        <div className='bg-[#33465c] py-[24px] px-[54px]'>
+          <p className='text-[27px]     text-white'>Immigration and citizenship</p>
+          <div className='flex gap-x-[398px] pt-[14px] '>
+            <p className='text-[16px]   text-white'>Help Centre</p>
+            <p className='text-[16px]   text-white'>Contact us</p>
+          </div>
+        </div>
+        <div className='bg-[#26374a] px-[54px] py-[20px]'>
+          <p className='text-[27px]     text-white'>Government of Canada</p>
+          <section className='flex gap-x-[230px]'>
+            <div className='flex flex-col gap-y-3'>
+              <p className='text-[16px] text-white'>All contacts</p>
+              <p className='text-[16px] text-white'>Jobs</p>
+              <p className='text-[16px] text-white'>Immigration and citizenship</p>
+              <p className='text-[16px] text-white'>Travel and tourism</p>
+              <p className='text-[16px] text-white'>Business</p>
+              <p className='text-[16px] text-white'>Benefits</p>
+              <p className='text-[16px] text-white'>Health</p>
+
+            </div>
+            <div className='flex flex-col gap-y-3'>
+              <p className='text-[16px] text-white'>Departments and agencies</p>
+              <p className='text-[16px] text-white'>Taxes</p>
+              <p className='text-[16px] text-white'>Environment and natural resources</p>
+              <p className='text-[16px] text-white'>National security and defence</p>
+              <p className='text-[16px] text-white'>Culture, history and sport</p>
+              <p className='text-[16px] text-white'>Policing, justice and emergencies</p>
+              <p className='text-[16px] text-white'>Transport and infrastructure</p>
+
+            </div>
+            <div className='flex flex-col gap-y-3'>
+              <p className='text-[16px] text-white'>About government</p>
+              <p className='text-[16px] text-white'>Canada and the world</p>
+              <p className='text-[16px] text-white'>Money and finance</p>
+              <p className='text-[16px] text-white'>Science and innovation</p>
+              <p className='text-[16px] text-white'>Indigenous peoples</p>
+              <p className='text-[16px] text-white'>Veterans and military</p>
+              <p className='text-[16px] text-white'>Youth</p>
+
+            </div>
+          </section>
+        </div>
+        <div className='flex justify-between px-[54px] items-center'>
+          <div className='flex gap-x-[64px] text-[15px]'>
+            <p>Social media</p>
+            <p>Mobile applications</p>
+            <p>About Canada.ca</p>
+            <p>Terms and conditions</p>
+            <p>Privacy</p>
+          </div>
+          <div className='text-[64px] font-semibold font-serif'>
+            Canada
+          </div>
+        </div>
+        <div>
+
+        </div>
+      </footer>
     </div>
   );
 };
@@ -78,6 +371,13 @@ const App = () => {
 export function IcBaselineDownload(props) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" {...props}><path fill="black" d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7l7-7z"></path></svg>
+  )
+}
+
+
+export function MaterialSymbolsKeyboardArrowDownRounded(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062Z"></path></svg>
   )
 }
 
