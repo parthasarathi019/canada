@@ -37,20 +37,20 @@ const App = () => {
       <div>
         <hr className="border-[3.1px] border-black  border-t-0" />
         <div className="w-[90%] mx-auto relative">
-          <button onClick={toggleMenu} className='flex bg-[#444] items-center px-[33px] py-[12px] text-[20px] text-white' >
+          <button onClick={toggleMenu} className='flex bg-[#444] items-center px-[33px] py-[12px] text-[20px] text-white relative' >
             <div className="">MENU</div>
             <div><MaterialSymbolsKeyboardArrowDownRounded /></div>
           </button>
 
           {/* menu  */}
           <div className="">
-            <div className={` ${showMenu ? "bg-[#444] text-white absolute top-14 left-0" : "hidden"}`}>
+            <div className={` ${showMenu ? "bg-[#444] text-white absolute top-14 left-0 w-[27%]" : "hidden"}`}>
               <ul className="space-y-3">
 
-                <li className="relative group p-3">
-                  <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Job and the workplace</span>
-                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200">
-                    <div className="flex items-center flex-col gap-4">
+                <li className=" group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Job and the workplace</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 px-20 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
                       <h1 className="text-2xl underline font-bold">Job and the workplace</h1>
                       <a href="#find-job" className="cursor-pointer hover:underline">Find a job</a>
                       <a href="#training" className="cursor-pointer hover:underline">Training</a>
@@ -59,7 +59,7 @@ const App = () => {
                       <a href="#workplace-standards" className="cursor-pointer hover:underline">Workplace standards</a>
                       <a href="#pensions-retirement" className="cursor-pointer hover:underline">Pensions and retirement</a>
                     </div>
-                    <div className="flex items-center flex-col gap-4">
+                    <div className="flex flex-col gap-4">
                       <a href="#employment-insurance" className="cursor-pointer hover:underline">Employment Insurance benefits and leave</a>
                       <a href="#records-employment" className="cursor-pointer hover:underline">View your Records of Employment</a>
                       <a href="#social-insurance" className="cursor-pointer hover:underline">Apply for a Social Insurance Number (SIN)</a>
@@ -70,10 +70,10 @@ const App = () => {
                 </li>
 
 
-                <li className="relative group p-3">
-                  <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Immigration and citizenship</span>
-                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200">
-                    <div className="flex items-center flex-col gap-4">
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Immigration and citizenship</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
                       <h1 className="text-2xl underline font-bold">Immigration and citizenship</h1>
                       <a href="#my-application" className="cursor-pointer hover:underline">My application</a>
                       <a href="#visit" className="cursor-pointer hover:underline">Visit</a>
@@ -86,7 +86,7 @@ const App = () => {
                       <a href="#refugees-asylum" className="cursor-pointer hover:underline">Refugees and asylum</a>
                       <a href="#enforcement-violations" className="cursor-pointer hover:underline">Enforcement and violations</a>
                     </div>
-                    <div className="flex items-center flex-col gap-4">
+                    <div className="flex flex-col gap-4">
                       <a href="#most-requested" className="cursor-pointer hover:underline">Most requested</a>
                       <a href="#sign-in" className="cursor-pointer hover:underline">Sign in or create an account to apply online</a>
                       <a href="#check-status" className="cursor-pointer hover:underline">Check your application status</a>
@@ -99,10 +99,10 @@ const App = () => {
                   </div>
                 </li>
 
-                <li className="relative group p-3">
-                  <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Travel and tourism</span>
-                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200">
-                    <div className="flex items-center flex-col gap-4">
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Travel and tourism</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
                       <h1 className="text-2xl underline font-bold">Travel and tourism</h1>
                       <a href="#travel-advice" className="cursor-pointer hover:underline">Travel advice and advisories</a>
                       <a href="#covid19-travel" className="cursor-pointer hover:underline">COVID-19: Travel, testing and borders</a>
@@ -115,7 +115,7 @@ const App = () => {
                       <a href="#assistance-outside" className="cursor-pointer hover:underline">Assistance outside Canada</a>
                       <a href="#stay-connected" className="cursor-pointer hover:underline">Stay connected</a>
                     </div>
-                    <div className="flex items-center flex-col gap-4">
+                    <div className="flex flex-col gap-4">
                       <a href="#emergency-assistance" className="cursor-pointer hover:underline">Emergency assistance abroad</a>
                       <a href="#visa-requirements" className="cursor-pointer hover:underline">Find out if you need a visa to travel to Canada</a>
                       <a href="#apply-eta" className="cursor-pointer hover:underline">Apply for an eTA</a>
@@ -126,10 +126,10 @@ const App = () => {
                   </div>
                 </li>
 
-                <li className="relative group p-3">
-                  <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Business and industry</span>
-                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200">
-                    <div className="flex items-center flex-col gap-4">
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Business and industry</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
                       <h1 className="text-2xl underline font-bold">Business and industry</h1>
                       <a href="#start-business" className="cursor-pointer hover:underline">Starting a business</a>
                       <a href="#business-grants" className="cursor-pointer hover:underline">Business grants and financing</a>
@@ -146,7 +146,7 @@ const App = () => {
                       <a href="#protecting-business" className="cursor-pointer hover:underline">Protecting your business</a>
                       <a href="#insolvency-business" className="cursor-pointer hover:underline">Insolvency for business</a>
                     </div>
-                    <div className="flex items-center flex-col gap-4">
+                    <div className="flex flex-col gap-4">
                       <a href="#find-corporation" className="cursor-pointer hover:underline">Find a corporation</a>
                       <a href="#report-imported-goods" className="cursor-pointer hover:underline">Report your imported goods</a>
                       <a href="#search-trademarks" className="cursor-pointer hover:underline">Search for trademarks</a>
@@ -158,10 +158,10 @@ const App = () => {
                     </div>
                   </div>
                 </li>
-                <li className="relative group p-3">
-                  <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Benefits</span>
-                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200">
-                    <div className="flex items-center flex-col gap-4">
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Benefits</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
                       <h1 className="text-2xl underline font-bold">Benefits</h1>
                       <a href="#ei-benefits-leave" className="cursor-pointer hover:underline">Employment Insurance benefits and leave</a>
                       <a href="#family-caregiving-benefits" className="cursor-pointer hover:underline">Family and caregiving benefits</a>
@@ -173,7 +173,7 @@ const App = () => {
                       <a href="#benefits-payment-dates" className="cursor-pointer hover:underline">Benefits payment dates</a>
                       <a href="#benefits-finder" className="cursor-pointer hover:underline">Benefits finder</a>
                     </div>
-                    <div className="flex items-center flex-col gap-4">
+                    <div className="flex flex-col gap-4">
                       <a href="#notify-government-death" className="cursor-pointer hover:underline">Notify the government of a death</a>
                       <a href="#apply-ei" className="cursor-pointer hover:underline">Apply for Employment Insurance</a>
                       <a href="#apply-student-loans" className="cursor-pointer hover:underline">Apply for student loans and grants</a>
@@ -184,10 +184,10 @@ const App = () => {
                     </div>
                   </div>
                 </li>
-                <li className="relative group p-3">
-                  <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Health</span>
-                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200">
-                    <div className="flex items-center flex-col gap-4">
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Health</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
                       <h1 className="text-2xl underline font-bold">Health</h1>
                       <a href="#food-nutrition" className="cursor-pointer hover:underline">Food and nutrition</a>
                       <a href="#diseases-conditions" className="cursor-pointer hover:underline">Diseases and conditions</a>
@@ -197,7 +197,7 @@ const App = () => {
                       <a href="#health-risks-safety" className="cursor-pointer hover:underline">Health risks and safety</a>
 
                     </div>
-                    <div className="flex items-center flex-col gap-4">
+                    <div className="flex flex-col gap-4">
                       <a href="#healthy-living" className="cursor-pointer hover:underline">Healthy living</a>
                       <a href="#indigenous-health" className="cursor-pointer hover:underline">Indigenous health</a>
                       <a href="#health-system-services" className="cursor-pointer hover:underline">Health system and services</a>
@@ -208,10 +208,10 @@ const App = () => {
                     </div>
                   </div>
                 </li>
-                <li className="relative group p-3">
-                  <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Taxes</span>
-                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200">
-                    <div className="flex items-center flex-col gap-4">
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Taxes</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
                       <h1 className="text-2xl underline font-bold">Taxes</h1>
                       <a href="#income-tax" className="cursor-pointer hover:underline">Income tax</a>
                       <a href="#gst-hst" className="cursor-pointer hover:underline">GST/HST</a>
@@ -221,7 +221,7 @@ const App = () => {
                       <a href="#tax-credits-benefits" className="cursor-pointer hover:underline">Tax credits and benefits for individuals</a>
                       <a href="#excise-taxes" className="cursor-pointer hover:underline">Excise taxes, duties, and levies</a>
                     </div>
-                    <div className="flex items-center flex-col gap-4">
+                    <div className="flex flex-col gap-4">
                       <a href="#charities-giving" className="cursor-pointer hover:underline">Charities and giving</a>
                       <a href="#my-account" className="cursor-pointer hover:underline">My Account</a>
                       <a href="#my-business-account" className="cursor-pointer hover:underline">My Business Account</a>
@@ -232,10 +232,10 @@ const App = () => {
                     </div>
                   </div>
                 </li>
-                <li className="relative group p-3">
-                  <span className="cursor-pointer hover:bg-white text-[22px] hover:text-black py-2 pr-[96px] pl-[20px]">Environment and natural resources</span>
-                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200">
-                    <div className="flex items-center flex-col gap-4">
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Environment and natural resources</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
                       <h1 className="text-2xl underline font-bold">Environment and natural resources</h1>
                       <a href="#weather-climate-hazards" className="cursor-pointer hover:underline">Weather, climate and hazards</a>
                       <a href="#energy" className="cursor-pointer hover:underline">Energy</a>
@@ -246,12 +246,184 @@ const App = () => {
                       <a href="#pollution-waste-management" className="cursor-pointer hover:underline">Pollution and waste management</a>
                       <a href="#environmental-conservation-protection" className="cursor-pointer hover:underline">Environmental conservation and protection</a>
                     </div>
-                    <div className="flex items-center flex-col gap-4">
-                    <a href="#local-weather-forecast" className="cursor-pointer hover:underline">Local weather forecast</a>
+                    <div className="flex flex-col gap-4">
+                      <a href="#local-weather-forecast" className="cursor-pointer hover:underline">Local weather forecast</a>
                       <a href="#fuel-efficient-vehicles" className="cursor-pointer hover:underline">Fuel-efficient vehicles</a>
                       <a href="#home-energy-efficiency" className="cursor-pointer hover:underline">Home energy efficiency</a>
                       <a href="#species-at-risk" className="cursor-pointer hover:underline">Species at risk</a>
                       <a href="#prepare-severe-weather" className="cursor-pointer hover:underline">Prepare for severe weather</a>
+                    </div>
+                  </div>
+                </li>
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">National security and defence</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
+                      <h1 className="text-2xl underline font-bold">National security and defence</h1>
+                      <a href="#national-security" className="cursor-pointer hover:underline">National security</a>
+                      <a href="#canadian-armed-forces" className="cursor-pointer hover:underline">Canadian Armed Forces</a>
+                      <a href="#defence-equipment" className="cursor-pointer hover:underline">Defence equipment purchases and upgrades</a>
+                      <a href="#transportation-security" className="cursor-pointer hover:underline">Transportation security</a>
+                      <a href="#securing-border" className="cursor-pointer hover:underline">Securing the border</a>
+                      <a href="#cyber-security" className="cursor-pointer hover:underline">Cyber security</a>
+                      <a href="#jobs-national-security" className="cursor-pointer hover:underline">Jobs in national security and defence</a>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <a href="#services-military" className="cursor-pointer hover:underline">Services and benefits for the military</a>
+                      <a href="#jobs-canadian-armed-forces" className="cursor-pointer hover:underline">Jobs in the Canadian Armed Forces</a>
+                      <a href="#military-ranks" className="cursor-pointer hover:underline">Military ranks</a>
+                      <a href="#defence-equipment-list" className="cursor-pointer hover:underline">Defence equipment</a>
+                      <a href="#terrorist-entities-list" className="cursor-pointer hover:underline">Current list of terrorist entities</a>
+                      <a href="#join-cadet-program" className="cursor-pointer hover:underline">Join the Cadet Program</a>
+                      <a href="#canada-defence-policy" className="cursor-pointer hover:underline">Canada's Defence policy</a>
+                    </div>
+                  </div>
+                </li>
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Culture, history and sport</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
+                      <h1 className="text-2xl underline font-bold">Culture, history and sport</h1>
+                      <a href="#funding-culture-history-sport" className="cursor-pointer hover:underline">Funding - Culture, history and sport</a>
+                      <a href="#events-celebrations" className="cursor-pointer hover:underline">Events, celebrations and commemorations</a>
+                      <a href="#cultural-landmarks-attractions" className="cursor-pointer hover:underline">Cultural landmarks and attractions</a>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <a href="#canadian-identity-society" className="cursor-pointer hover:underline">Canadian identity and society</a>
+                      <a href="#sport" className="cursor-pointer hover:underline">Sport</a>
+                      <a href="#history-heritage" className="cursor-pointer hover:underline">History and heritage</a>
+                      <a href="#arts-media" className="cursor-pointer hover:underline">Arts and media</a>
+                      <a href="#cultural-youth-programs" className="cursor-pointer hover:underline">Cultural youth programs</a>
+                      <a href="#cultural-trade-investment" className="cursor-pointer hover:underline">Cultural trade and investment</a>
+                      <a href="#visit-canadian-virtual-war-memorial" className="cursor-pointer hover:underline">Visit the Canadian Virtual War Memorial</a>
+                      <a href="#anthems-symbols-canada" className="cursor-pointer hover:underline">Anthems and symbols of Canada</a>
+                      <a href="#find-crtc-decision" className="cursor-pointer hover:underline">Find a CRTC decision</a>
+                      <a href="#research-family-history" className="cursor-pointer hover:underline">Research your family history</a>
+                      <a href="#search-census-records" className="cursor-pointer hover:underline">Search census records</a>
+                      <a href="#landmarks-attractions-capital" className="cursor-pointer hover:underline">Landmarks and attractions in Canada's capital</a>
+                    </div>
+                  </div>
+                </li>
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Policing, justice and emergencies</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
+                      <h1 className="text-2xl underline font-bold">Policing, justice and emergencies</h1>
+                      <a href="#policing" className="cursor-pointer hover:underline">Policing</a>
+                      <a href="#justice" className="cursor-pointer hover:underline">Justice</a>
+                      <a href="#emergencies" className="cursor-pointer hover:underline">Emergencies</a>
+                      <a href="#corrections" className="cursor-pointer hover:underline">Corrections</a>
+                      <a href="#parole-record-suspension" className="cursor-pointer hover:underline">Parole, record suspension, expungement and clemency</a>
+                      <a href="#victims-of-crime" className="cursor-pointer hover:underline">Victims of crime</a>
+                      <a href="#apply-renew-firearms-licence" className="cursor-pointer hover:underline">Apply/Renew a firearms licence</a>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <a href="#get-criminal-records-check" className="cursor-pointer hover:underline">Get a criminal records check</a>
+                      <a href="#apply-criminal-record-suspension" className="cursor-pointer hover:underline">Apply for a criminal record suspension</a>
+                      <a href="#what-to-do-emergency" className="cursor-pointer hover:underline">What to do during an emergency</a>
+                      <a href="#know-law-impaired-driving" className="cursor-pointer hover:underline">Know the law on impaired driving</a>
+                      <a href="#help-solve-crime" className="cursor-pointer hover:underline">Help solve a crime</a>
+                    </div>
+                  </div>
+                </li>
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Transport and infrastructure</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
+                      <h1 className="text-2xl underline font-bold">Transport and infrastructure</h1>
+                      <a href="#aviation" className="cursor-pointer hover:underline">Aviation</a>
+                      <a href="#marine-transportation" className="cursor-pointer hover:underline">Marine transportation</a>
+                      <a href="#road-transportation" className="cursor-pointer hover:underline">Road transportation</a>
+                      <a href="#rail-transportation" className="cursor-pointer hover:underline">Rail transportation</a>
+                      <a href="#dangerous-goods" className="cursor-pointer hover:underline">Dangerous goods</a>
+                      <a href="#infrastructure" className="cursor-pointer hover:underline">Infrastructure</a>
+                      <a href="#zero-emission-vehicles" className="cursor-pointer hover:underline">Zero-emission vehicles</a>
+                      <a href="#drone-safety" className="cursor-pointer hover:underline">Drone safety</a>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <a href="#what-cant-bring-airplane" className="cursor-pointer hover:underline">What you can't bring on an airplane</a>
+                      <a href="#register-vessel" className="cursor-pointer hover:underline">Register your vessel</a>
+                      <a href="#child-car-seat-safety" className="cursor-pointer hover:underline">Child car seat safety</a>
+                      <a href="#transporting-dangerous-goods" className="cursor-pointer hover:underline">Transporting dangerous goods - Regulations</a>
+                      <a href="#canadian-aviation-regulations" className="cursor-pointer hover:underline">Canadian Aviation Regulations</a>
+                    </div>
+                  </div>
+                </li>
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Canada and the world</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
+                      <h1 className="text-2xl underline font-bold">Canada and the world</h1>
+                      <a href="#food-nutrition" className="cursor-pointer hover:underline">Food and nutrition</a>
+                      <a href="#diseases-conditions" className="cursor-pointer hover:underline">Diseases and conditions</a>
+                      <a href="#vaccines-immunization" className="cursor-pointer hover:underline">Vaccines and immunization</a>
+                      <a href="#drug-health-products" className="cursor-pointer hover:underline">Drug and health products</a>
+                      <a href="#product-safety" className="cursor-pointer hover:underline">Product safety</a>
+                      <a href="#health-risks-safety" className="cursor-pointer hover:underline">Health risks and safety</a>
+                      <a href="#healthy-living" className="cursor-pointer hover:underline">Healthy living</a>
+                      <a href="#indigenous-health" className="cursor-pointer hover:underline">Indigenous health</a>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <a href="#health-system-services" className="cursor-pointer hover:underline">Health system and services</a>
+                      <a href="#science-research-data" className="cursor-pointer hover:underline">Science, research and data</a>
+                      <a href="#licensed-cannabis" className="cursor-pointer hover:underline">Licensed cultivators, processors and seller of cannabis</a>
+                      <a href="#food-recalls-alerts" className="cursor-pointer hover:underline">Food and product recalls and safety alerts</a>
+                      <a href="#canada-food-guide" className="cursor-pointer hover:underline">Canada's food guide</a>
+                    </div>
+                  </div>
+                </li>
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Money and finances</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
+                      <h1 className="text-2xl underline font-bold">Money and finances</h1>
+                      <a href="#managing-money" className="cursor-pointer hover:underline">Managing your money</a>
+                      <a href="#debt-borrowing" className="cursor-pointer hover:underline">Debt and borrowing</a>
+                      <a href="#savings-investments" className="cursor-pointer hover:underline">Savings and investments</a>
+                      <a href="#education-funding" className="cursor-pointer hover:underline">Education funding</a>
+                      <a href="#pensions-retirement" className="cursor-pointer hover:underline">Pensions and retirement</a>
+                      <a href="#protection-frauds-scams" className="cursor-pointer hover:underline">Protection from frauds and scams</a>
+                      <a href="#financial-tools-calculators" className="cursor-pointer hover:underline">Financial tools and calculators</a>
+                      <a href="#financial-literacy-programs" className="cursor-pointer hover:underline">Financial literacy programs</a>
+                      <a href="#consumer-affairs" className="cursor-pointer hover:underline">Consumer affairs</a>
+                      <a href="#insolvency" className="cursor-pointer hover:underline">Insolvency</a>
+                      <a href="#taxes" className="cursor-pointer hover:underline">Taxes</a>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <a href="#government-finances" className="cursor-pointer hover:underline">Government finances</a>
+                      <a href="#business-grants-financing" className="cursor-pointer hover:underline">Business grants and financing</a>
+                      <a href="#financial-services-regulation" className="cursor-pointer hover:underline">Financial and money services regulation</a>
+                      <a href="#find-bankruptcy-insolvency-record" className="cursor-pointer hover:underline">Find a bankruptcy or insolvency record</a>
+                      <a href="#student-loans" className="cursor-pointer hover:underline">Student loans</a>
+                      <a href="#set-up-direct-deposit" className="cursor-pointer hover:underline">Set up direct deposit</a>
+                      <a href="#mortgages" className="cursor-pointer hover:underline">Mortgages</a>
+                      <a href="#credit-report-scores" className="cursor-pointer hover:underline">Credit report and scores</a>
+                      <a href="#make-a-budget" className="cursor-pointer hover:underline">Make a budget</a>
+                      <a href="#rates-contribution-limits" className="cursor-pointer hover:underline">Rates and contribution limits</a>
+                    </div>
+                  </div>
+                </li>
+                <li className="group p-3 cursor-pointer hover:bg-white w-full text-[14px] hover:text-black py-2]">
+                  <span className="text-[20px]">Science and innovation</span>
+                  <div className="bg-white min-w-max text-black absolute top-0 left-[100%] p-3 justify-between items-center gap-12 opacity-0 hidden group-hover:opacity-100 w-full shadow-2xl z-10 group-hover:flex transition duration-200 border">
+                    <div className="flex flex-col gap-4">
+                      <h1 className="text-2xl underline font-bold">Science and innovation</h1>
+                      <a href="#research-funding-awards" className="cursor-pointer hover:underline">Research funding and awards</a>
+                      <a href="#science-subjects" className="cursor-pointer hover:underline">Science subjects</a>
+                      <a href="#open-data-statistics" className="cursor-pointer hover:underline">Open data, statistics and archives</a>
+                      <a href="#research-institutes-facilities" className="cursor-pointer hover:underline">Research institutes and facilities</a>
+                      <a href="#r-and-d-innovation" className="cursor-pointer hover:underline">R&D and innovation</a>
+                      <a href="#intellectual-property-copyright" className="cursor-pointer hover:underline">Intellectual property and copyright</a>
+                      <a href="#directory-scientists-professionals" className="cursor-pointer hover:underline">Directory of scientists and research professionals</a>
+                      <a href="#science-education-resources" className="cursor-pointer hover:underline">Science education resources</a>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <a href="#national-building-codes" className="cursor-pointer hover:underline">National building codes</a>
+                      <a href="#official-times-across-canada" className="cursor-pointer hover:underline">Official times across Canada</a>
+                      <a href="#check-sunrise-sunset-times" className="cursor-pointer hover:underline">Check sunrise and sunset times</a>
+                      <a href="#grants-technological-innovation" className="cursor-pointer hover:underline">Grants for technological innovation (IRAP)</a>
+                      <a href="#federal-science-library" className="cursor-pointer hover:underline">Federal Science Library</a>
+                      <a href="#live-view-northern-lights" className="cursor-pointer hover:underline">Live view of northern lights cam</a>
                     </div>
                   </div>
                 </li>
